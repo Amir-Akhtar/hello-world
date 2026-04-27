@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DevOps Launch Pad</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(120deg, #0f172a, #1e293b);
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            max-width: 700px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: #38bdf8;
+        }
+
+        p {
+            font-size: 18px;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 20px;
+            margin: 15px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background: rgba(56,189,248,0.1);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .btn {
+            margin-top: 30px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #38bdf8;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0ea5e9;
+        }
+
+        footer {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🚀 DevOps Launch Pad</h1>
+    <p>From Code → Build → Deploy → Scale. Experience real CI/CD flow in action.</p>
+
+    <div class="grid">
+        <div class="card">
+            <h3>⚙️ CI Pipeline</h3>
+            <p>Automated build & integration with Jenkins</p>
+        </div>
+
+        <div class="card">
+            <h3>🐳 Docker Ready</h3>
+            <p>Containerized applications for portability</p>
+        </div>
+
+        <div class="card">
+            <h3>☸️ Kubernetes</h3>
+            <p>Scalable deployment orchestration</p>
+        </div>
+
+        <div class="card">
+            <h3>📊 Monitoring</h3>
+            <p>Track performance & logs in real time</p>
+        </div>
+    </div>
+
+    <button class="btn">Launch Project</button>
+
+    <footer>
+        Built for DevOps Learning Journey ⚡
+    </footer>
+</div>
+
+</body>
+</html>

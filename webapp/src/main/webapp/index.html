@@ -1,118 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>DevOps Launch Pad</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+<meta charset="UTF-8">
+<title>DevOps Launch Pad</title>
 
-        body {
-            background: linear-gradient(120deg, #0f172a, #1e293b);
-            color: white;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Arial, sans-serif;
+    }
 
-        .container {
-            text-align: center;
-            padding: 40px;
-            max-width: 700px;
-        }
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        background: linear-gradient(-45deg, #0f172a, #1e293b, #0ea5e9, #0f172a);
+        background-size: 400% 400%;
+        animation: gradientBG 12s ease infinite;
+    }
 
-        h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
-            color: #38bdf8;
-        }
+    @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
 
-        p {
-            font-size: 18px;
-            color: #cbd5e1;
-            margin-bottom: 30px;
-        }
+    .container {
+        text-align: center;
+        max-width: 850px;
+        padding: 40px;
+    }
 
-        .card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 20px;
-            margin: 15px;
-            border-radius: 12px;
-            transition: 0.3s;
-        }
+    h1 {
+        font-size: 52px;
+        margin-bottom: 10px;
+        color: #38bdf8;
+        text-shadow: 0 0 20px rgba(56,189,248,0.4);
+    }
 
-        .card:hover {
-            transform: scale(1.05);
-            background: rgba(56,189,248,0.1);
-        }
+    p {
+        font-size: 18px;
+        color: #cbd5e1;
+        margin-bottom: 35px;
+    }
 
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        padding: 25px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        transition: 0.3s ease;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(56,189,248,0.3);
+        border-color: #38bdf8;
+    }
+
+    .card h3 {
+        margin-bottom: 10px;
+        color: #38bdf8;
+    }
+
+    .card p {
+        font-size: 14px;
+        color: #e2e8f0;
+    }
+
+    .btn {
+        margin-top: 35px;
+        padding: 14px 30px;
+        border: none;
+        border-radius: 10px;
+        background: #38bdf8;
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 16px;
+    }
+
+    .btn:hover {
+        background: #0ea5e9;
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(56,189,248,0.5);
+    }
+
+    footer {
+        margin-top: 25px;
+        font-size: 13px;
+        color: #94a3b8;
+    }
+
+    @media (max-width: 768px) {
         .grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+            grid-template-columns: 1fr;
         }
-
-        .btn {
-            margin-top: 30px;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 8px;
-            background: #38bdf8;
-            color: black;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
+        h1 {
+            font-size: 36px;
         }
-
-        .btn:hover {
-            background: #0ea5e9;
-        }
-
-        footer {
-            margin-top: 25px;
-            font-size: 14px;
-            color: #94a3b8;
-        }
-    </style>
+    }
+</style>
 </head>
+
 <body>
 
 <div class="container">
     <h1>🚀 DevOps Launch Pad</h1>
-    <p>From Code → Build → Deploy → Scale. Experience real CI/CD flow in action.</p>
+    <p>Code → Build → Test → Deploy → Scale. Real CI/CD pipeline in action.</p>
 
     <div class="grid">
         <div class="card">
-            <h3>⚙️ CI Pipeline</h3>
-            <p>Automated build & integration with Jenkins</p>
+            <h3>⚙️ CI/CD Automation</h3>
+            <p>Jenkins pipeline automates build and deployment process</p>
         </div>
 
         <div class="card">
-            <h3>🐳 Docker Ready</h3>
-            <p>Containerized applications for portability</p>
+            <h3>🐳 Docker Containers</h3>
+            <p>Application packaged in lightweight portable containers</p>
         </div>
 
         <div class="card">
-            <h3>☸️ Kubernetes</h3>
-            <p>Scalable deployment orchestration</p>
+            <h3>☸️ Kubernetes Ready</h3>
+            <p>Scalable and resilient orchestration architecture</p>
         </div>
 
         <div class="card">
-            <h3>📊 Monitoring</h3>
-            <p>Track performance & logs in real time</p>
+            <h3>📊 Observability</h3>
+            <p>Logs, metrics, and performance monitoring enabled</p>
         </div>
     </div>
 
-    <button class="btn">Launch Project</button>
+    <button class="btn">🚀 Launch Pipeline</button>
 
     <footer>
-        Built for DevOps Learning Journey ⚡
+        Built by DevOps Engineer • CI/CD Project Demo ⚡
     </footer>
 </div>
 
